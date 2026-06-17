@@ -10,8 +10,7 @@
             ]
         },
         "research": {
-            "command": "uv",
-            "args": ["run", "research_server.py"]
+            "url": "https://remote-research-dovn.onrender.com/sse"
         },
         "fetch": {
             "command": "uvx",
