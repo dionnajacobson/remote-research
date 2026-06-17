@@ -1,21 +1,35 @@
 {
-    "mcpServers": {
-        
-        "filesystem": {
-            "command": "npx",
-            "args": [
-                "-y",
-                "@modelcontextprotocol/server-filesystem",
-                "."
-            ]
+    "mcpServers": [
+        {
+            "name": "filesystem",
+            "description": "A filesystem server",
+            "type": "stdio",
+            "config": {
+                "command": "npx",
+                "args": [
+                    "-y",
+                    "@modelcontextprotocol/server-filesystem",
+                    "."
+                ]
+            }
         },
-        "research": {
-            "url": "https://remote-research-dovn.onrender.com/sse"
+        {
+            "name": "research",
+            "description": "A research server",
+            "type": "sse",
+            "config": {
+                "url": "https://remote-research-dovn.onrender.com/sse"
+            }
         },
-        "fetch": {
-            "command": "uvx",
-            "args": ["mcp-server-fetch"]
+        {
+            "name": "fetch",
+            "description": "A fetch server",
+            "type": "stdio",
+            "config": {
+                "command": "uvx",
+                "args": ["mcp-server-fetch"]
+            }
         }
-    }
+    ]
 }
   
